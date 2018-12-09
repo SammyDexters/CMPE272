@@ -13,8 +13,8 @@ public class Users {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "userid")
-	String userid;
+	@Column(name = "id")
+	String id;
 	@Column(name="firstname")
 	String firstname;
 	@Column(name="lastname")
@@ -26,21 +26,31 @@ public class Users {
 	
 	
 	
+
+	public Users(String id, String firstname, String lastname, String password, String flag) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.password = password;
+		this.flag = flag;
+	}
 	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+
 	@Override
 	public String toString() {
-		return "Users [userid=" + userid + ", firstname=" + firstname + ", lastname=" + lastname + ", password="
-				+ password + ", flag=" + flag + "]";
+		return "Users [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", password=" + password
+				+ ", flag=" + flag + "]";
 	}
-
-	public String getUserid() {
-		return userid;
+	public String getId() {
+		return id;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getFirstname() {
 		return firstname;

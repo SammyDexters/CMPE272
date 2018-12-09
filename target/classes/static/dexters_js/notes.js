@@ -51,19 +51,23 @@ function load_notes(){
 	}
 
 function success_notes(data){
-	$("#n1").html(data[0].notes);
-	$("#n2").html(data[1].notes);
-	$("#n3").html(data[2].notes);
-	$("#n4").html(data[3].notes);
-	$("#n5").html(data[4].notes);
 	
-	$(".l1").attr("notes", data[0].notes)
-	$(".l2").attr("notes", data[1].notes)
-	$(".l3").attr("notes", data[2].notes)
-	$(".l4").attr("notes", data[3].notes)
-	$(".l5").attr("notes", data[4].notes)
+	/*for(var i=0; i< data.length-1; i++){*/
+		
+	$("#n1").html(data[data.length-5].notes);
+	$("#n2").html(data[data.length-4].notes);
+	$("#n3").html(data[data.length-3].notes);
+	$("#n4").html(data[data.length-2].notes);
+	$("#n5").html(data[data.length-1].notes);
 	
+	$(".l1").attr("notes", data[data.length-5].notes)
+	$(".l2").attr("notes", data[data.length-4].notes)
+	$(".l3").attr("notes", data[data.length-3].notes)
+	$(".l4").attr("notes", data[data.length-2].notes)
+	$(".l5").attr("notes", data[data.length-1].notes)
+
 	$("#values").html($(".l1").attr("notes"));
+	
 }
 
 

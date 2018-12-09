@@ -38,7 +38,7 @@
         </div>
         <form role="search" class="navbar-form-custom" method="post" action="#">
             <div class="form-group">
-                <input type="text" placeholder="Search something special" class="form-control" name="search">
+                <input type="text" placeholder="" class="form-control" name="search">
             </div>
         </form>
         <div class="mobile-menu">
@@ -59,127 +59,7 @@
                 </ul>
             </div>
         </div>
-        <div class="navbar-right">
-            <ul class="nav navbar-nav no-borders">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-speaker"></i>
-                    </a>
-                    <ul class="dropdown-menu hdropdown notification animated flipInX">
-                        <li>
-                            <a>
-                                <span class="label label-success">NEW</span> Text 
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="label label-warning">WAR</span> Text
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="label label-danger">ERR</span> Text
-                            </a>
-                        </li>
-                        <li class="summary"><a href="#">See all notifications</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-keypad"></i>
-                    </a>
-
-                    <div class="dropdown-menu hdropdown bigmenu animated flipInX">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-portfolio text-info"></i>
-                                        <h5>Projects</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-mail text-warning"></i>
-                                        <h5>Email</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-users text-success"></i>
-                                        <h5>Contacts</h5>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-comment text-info"></i>
-                                        <h5>Forum</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-graph1 text-danger"></i>
-                                        <h5>Analytics</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-box1 text-success"></i>
-                                        <h5>Files</h5>
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-mail"></i>
-                        <span class="label label-success">4</span>
-                    </a>
-                    <ul class="dropdown-menu hdropdown animated flipInX">
-                        <div class="title">
-                            You have 4 new messages
-                        </div>
-                        <li>
-                            <a>
-                                It is a long established.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                There are many variations.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Lorem Ipsum is simply dummy.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Contrary to popular belief.
-                            </a>
-                        </li>
-                        <li class="summary"><a href="#">See All Messages</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" id="sidebar" class="right-sidebar-toggle">
-                        <i class="pe-7s-upload pe-7s-news-paper"></i>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="pe-7s-upload pe-rotate-90"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+       
     </nav>
 </div>
 
@@ -192,18 +72,14 @@
             </a>
 
             <div class="stats-label text-color">
-                <span class="font-extra-bold font-uppercase">UserName</span>
+                <span class="font-extra-bold font-uppercase">Dexters</span>
 
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                         <small class="text-muted">Menu<b class="caret"></b></small>
                     </a>
                     <ul class="dropdown-menu animated flipInX m-t-xs">
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Analytics</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Logout</a></li>
+                         <li><a th:href="@{landing}">Logout</a></li>
                     </ul>
                 </div>
 
@@ -213,7 +89,7 @@
                     <h4 class="font-extra-bold m-b-xs">
                         $260 104,200
                     </h4>
-                    <small class="text-muted">Your income from the last year in sales product X.</small>
+                    <small class="text-muted">Your income from the last year in sales product.</small>
                 </div>
             </div>
         </div>
@@ -254,26 +130,7 @@
 
 <div class="content">
 
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="hpanel">
-                <div class="panel-body">
-                    <div class="">Frequently asked questions. Find the answer or contact with us on support email.</div>
-                    <div class="m-t-sm">
-                        <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Search question..">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default"><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
+ <div class="row">
         <div class="col-lg-6">
             <div class="hpanel panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel-body">
@@ -283,43 +140,47 @@
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion" href="#q1" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q0}" />
+                      
                     </a>
                     <div id="q1" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr> <p th:text="${ans0}" />
                     </div>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion" href="#q2" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                      <p th:text="${q1}" />
                     </a>
                     <div id="q2" class="panel-collapse collapse">
-                        <hr>All general questions about our app</div>
+                        <hr><p th:text="${ans1}" />
+					</div>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion" href="#q3" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                       <p th:text="${q2}" />
                     </a>
                     <div id="q3" class="panel-collapse collapse">
-                        <hr>All general questions about our app</div>
+                        <hr><p th:text="${ans2}" />
+                        </div>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion" href="#q4" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q3}" />
                     </a>
                     <div id="q4" class="panel-collapse collapse">
-                        <hr>All general questions about our app</div>
+                        <hr><p th:text="${ans3}" />
+                        </div>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion" href="#q5" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q4}" />
                     </a>
                     <div id="q5" class="panel-collapse collapse">
-                        <hr>All general questions about our app</div>
+                        <hr><p th:text="${ans4}" /></div>
                 </div>
                 
             </div>
@@ -328,69 +189,69 @@
             <div class="hpanel panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                 <div class="panel-body">
                     <h4 class="m-t-none m-b-none">Technical questions</h4>
-                    <small class="text-muted">All technical questions about our app.</small>
+                    <small class="text-muted">All technical questions about Stocks.</small>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q10" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
-                    </a>
+                        <p th:text="${q5}" />
+                     </a>
                     <div id="q10" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr> <p th:text="${ans10}" />
                     </div>
                 </div>
                 <div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q11" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                       <p th:text="${q6}" />
                     </a>
                     <div id="q11" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr><p th:text="${ans6}" />
                     </div>
                 </div>
 				<div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q12" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q7}" />
                     </a>
                     <div id="q12" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr><p th:text="${ans7}" />
                     </div>
                 </div>
 				<div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q13" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q8}" />
                     </a>
                     <div id="q13" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr><p th:text="${ans8}" />
                     </div>
                 </div>
 				<div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q14" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                         <p th:text="${q9}" />
                     </a>
                     <div id="q14" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr> <p th:text="${ans9}" />
                     </div>
                 </div>
 				<div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q15" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q10}" />
                     </a>
                     <div id="q15" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr> <p th:text="${ans10}" />
                     </div>
                 </div>
 				<div class="panel-body">
                     <a data-toggle="collapse" data-parent="#accordion2" href="#q16" aria-expanded="true">
                         <i class="fa fa-chevron-down pull-right text-muted"></i>
-                        All general questions about our app
+                        <p th:text="${q11}" />
                     </a>
                     <div id="q16" class="panel-collapse collapse">
-                        <hr>All general questions about our app
+                        <hr><p th:text="${ans11}" />
                     </div>
                 </div>
             </div>
@@ -404,9 +265,9 @@
 <!-- Right sidebar -->
     <footer class="footer">
         <span class="pull-right">
-            Example text
+           Dexters
         </span>
-        Company 2015-2020
+        Company 2018-2020
     </footer>
 
 </div>

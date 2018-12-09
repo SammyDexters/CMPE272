@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/v2")
 public class IntrinioAPI_multiple {
-	private static final String USERNAME = "743b5f438c88000ffc6332758029b212"; 
-	private static final String PASSWORD = "ce548e14e41df641d828602e11612375"; 
+	private static final String USERNAME = "xxxxxxxxxxxxx"; 
+	private static final String PASSWORD = "xxxxxxxxxxxx"; 
 	private static final Date TODAY = new Date();
 	private static final SimpleDateFormat DT_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	

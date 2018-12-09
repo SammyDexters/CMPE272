@@ -50,8 +50,9 @@
 <!-- back button-->
 <div class="color-line"></div>
 <div class="back-link">
-    <a id="back_dashboard_btn" th:href="@{dashboard}"  class="btn btn-primary">Back to Dashboard</a>
+    <a id="back_dashboard_btn" th:href="@{landing}"  class="btn btn-primary">Back to Dashboard</a>
 </div>
+
 
 <div class="login-container">
     <div class="row">
@@ -62,7 +63,7 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
+                           <form action="#" id="loginForm">
                             <div class="form-group">
                                 <label class="control-label" for="username">Username</label>
                                 <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="firstname" class="form-control">
@@ -77,21 +78,17 @@
                                 <div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                 <p class="help-block small"></p>
                             </div>
-                            <button id="login_btn" class="btn btn-success btn-block" onclick="login()">Login</button>
-                             <a id="test2" th:href="@{dashboard}"></a>
-                              <a class="btn btn-default btn-block" th:href="@{dashboard}">Register</a>
-                                  <script type="in/Login"></script>
-                                  <fb:login-button id="fbloginbtn" scope="public_profile,email" onlogin="loginfb()"></fb:login-button>
-                                   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                                     <!-- display profile info -->
+                            <a id="login_btn" class="btn btn-success btn-block" th:href="@{dashboard}" >Login</a>
+                             <a id="tester" th:href="@{dashboard}"></a>
+                              <a id="tester_fail" th:href="@{sound}"></a>
+                              <br>
+                             						<script type="in/Login"></script>
+                                  <!-- display profile info -->
         <div id="profileData" style="display: none;">
         <p><a href="javascript:void(0);" onclick="logout()">Logout</a></p>
-         <a id="tester" th:href="@{dashboard}"></a>
-         <p th:text="${message}" />
-    <p th:text="'Hello, ' + ${name} + '!'" />
-      </div>
-                           
-                        </form>
+        
+     </div>
+    </form>
   
                 </div>
             </div>
@@ -127,7 +124,8 @@
  <script type="text/javascript">
     // Setup an event listener to make an API call once auth is complete
     function onLinkedInLoad() {
-        IN.Event.on(IN, "auth", getProfileData);
+    	IN.Event.on(IN, "auth", getProfileData);
+        
     }
     
     // Use the API call wrapper to request the member's profile data
@@ -139,20 +137,30 @@
     function displayProfileData(data){
         var user = data.values[0];
         
+        
         document.getElementById('profileData').style.display = 'block';
         var email=user.emailAddress;
         var role;
         sessionStorage.setItem("firstName",user.firstName);
         sessionStorage.setItem("lastName",user.lastName);
-        if (email === "abhishek.s.prabhudesai@gmail.com") {
-            sessionStorage.setItem("role",'admin');
-        } else {
-            sessionStorage.setItem("role",'user');
-        }
-        
+        /*if(email === "abhishek.s.prabhudesai@gmail.com"||email ==="sowndhariyanandu.in@gmail.com"){
+        	
+           console.log(email);
+           
+            } else{
+            	 
+            	$("#tester_fail")[0].click();
+            }*/
        
-        apiLinkedIn(sessionStorage.firstName,sessionStorage.lastName,sessionStorage.role);
-        $("#tester")[0].click();
+       // apiLinkedIn(sessionStorage.firstName);
+            if(sessionStorage.firstName==="Sowndhariya"){
+            	$("#tester")[0].click();
+            }
+            else{
+            	$("#tester_fail")[0].click();
+            	
+            }
+        
     }
 
     // Handle an error response from the API call
@@ -170,20 +178,23 @@
         document.getElementById('profileData').remove();
     }
     
-    function apiLinkedIn(firstname,lastname,role){
-    	 var linkedIn = {}
-         linkedIn["firstname"] = firstname;
-         linkedIn["lastname"] = lastname;
-          $.ajax({
-             type: "POST",
-             contentType: "application/json",
-             url: "/v1/Postuser",
-             data: JSON.stringify(linkedIn),
-             dataType: 'json',
-             cache: false,
-             timeout: 600000
-       
-         });
+    function apiLinkedIn(firstname){
+    	
+    	var Twt = {}
+    	Twt["firstname"] =firstname;
+      $.ajax({
+          type: "POST",
+          contentType: "application/json",
+          url: "/v1/reqvalues",
+          data: JSON.stringify(Twt),
+          dataType: 'json',
+          cache: false,
+          timeout: 600000,
+          success: function (data) {
+        	  $("#test2")[0].click();
+            },
+      });
+          
     }
     
     
@@ -258,8 +269,7 @@
           });   
        }
 
-
-       function signOut(){
+ function signOut(){
           
           FB.logout(function(response) {
           // user is now logged out
@@ -267,17 +277,7 @@
           document.getElementById('fbloginbtn').style.display = 'block';
           document.getElementById('profileData').style.display = 'none';
           sessionStorage.clear();
-       }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
+       } 
     
     </script>
 

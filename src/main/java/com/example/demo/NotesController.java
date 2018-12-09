@@ -17,30 +17,30 @@ public class NotesController {
 	private NotesService notesService;
 
 	@RequestMapping(value = "/Getnotes", method = RequestMethod.GET)
-	public List getAllReservations() {
-		return notesService.getAllReservations();
+	public List getAllNotess() {
+		return notesService.getAllNotes();
 	}
 
 	@RequestMapping(value = "/Getnotes/{id}", method = RequestMethod.GET)
-	public Notes getReservation(@PathVariable String id) {
-		return notesService.getReservation(id);
+	public Notes getNotes(@PathVariable String id) {
+		return notesService.getNotes(id);
 	}
 
 	@RequestMapping(value = "/Postnotes", method = RequestMethod.POST)
-	public void addReservation(@RequestBody Notes notes) {
+	public void addNotes(@RequestBody Notes notes) {
 		System.out.println("----------------"+notes.getNotes());
-		notesService.addReservation(notes);
+		notesService.addNotes(notes);
 
 	}
 
 	@RequestMapping(value = "/Putnotes/{id}", method = RequestMethod.PUT)
-	public void updateReservation(@RequestBody Notes notes, @PathVariable Long id) {
-		notesService.updateReservation(id, notes);
+	public void updateNotes(@RequestBody Notes notes, @PathVariable Long id) {
+		notesService.updateNotes(id, notes);
 	}
 
 	@RequestMapping(value = "/Deletenotes/{id}", method = RequestMethod.DELETE)
-	public void deleteReservation(@PathVariable String id) {
-		notesService.deleteReservation(id);
+	public void deleteNotes(@PathVariable String id) {
+		notesService.deleteNotes(id);
 	}
 
 	

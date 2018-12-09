@@ -24,6 +24,12 @@ public class Notes {
 
 	
 	
+	public Notes(String notesid, String notes, String ownedby) {
+		super();
+		this.notesid = notesid;
+		this.notes = notes;
+		this.ownedby = ownedby;
+	}
 	public Notes() {
 		super();
 		// TODO Auto-generated constructor stub

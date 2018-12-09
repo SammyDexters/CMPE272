@@ -19,16 +19,17 @@ public class UserService {
 		return users;
 	}
 
-	public Users getUsers(String id) {
-		return userRepository.findById(id).orElse(null);
+	public Users getUsers(String firstname) {
+	
+		return userRepository.findById(firstname).orElse(null);
 
 	}
 
-	public void addUsers(Users user) {
-		userRepository.save(user);
+	public Users addUsers(Users user) {
+		return userRepository.save(user);
 	}
 
-	public void updateUsers(Long id, Users user) {
+	public void updateUsers(int id, Users user) {
 		userRepository.save(user);
 	}
 

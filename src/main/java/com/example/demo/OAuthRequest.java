@@ -52,10 +52,10 @@ public class OAuthRequest {
 	protected static HttpsURLConnection connection;
 	public OAuthConsumer Authentication() throws IOException {
 	//	Properties properties = getProperties();
-		String consumerKeyStr = "KF23fCZUTELtiEQKoYjUrNOBY";
-		String consumerSecretStr ="BBtNZ9jqa1iScHOVEwTs9YqkiLp9M2FAJvdDVFcOO7m0TyArzc";
-		String accessTokenStr = "327193571-SyrV4tXWpDlxFglsLFcv8hxZgrSq8gswjUTkFuWW";
-		String accessTokenSecretStr = "wIxSic3aQqxx8KujFFuwfl5k618MJe5PlKsaxDY83PlCH";
+		String consumerKeyStr = "xxxxxxxxxxxxxxxxxxxx";
+		String consumerSecretStr ="xxxxxxxxxxxxxxxxxxx";
+		String accessTokenStr = "xxxxxxxxxxxxxxxxxxxxx";
+		String accessTokenSecretStr = "xxxxxxxxxxxxxxxxxxx";
 		OAuthConsumer oAuthConsumer = new CommonsHttpOAuthConsumer(consumerKeyStr, consumerSecretStr);
 		oAuthConsumer.setTokenWithSecret(accessTokenStr, accessTokenSecretStr);
 		return oAuthConsumer;

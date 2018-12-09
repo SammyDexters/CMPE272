@@ -38,7 +38,7 @@
         </div>
         <form role="search" class="navbar-form-custom" method="post" action="#">
             <div class="form-group">
-                <input type="text" placeholder="Search something special" class="form-control" name="search">
+                <input type="text" placeholder="" class="form-control" name="search">
             </div>
         </form>
         <div class="mobile-menu">
@@ -46,139 +46,7 @@
                 <i class="fa fa-chevron-down"></i>
             </button>
             <div class="collapse mobile-navbar" id="mobile-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="" href="#">Login</a>
-                    </li>
-                    <li>
-                        <a class="" href="#">Logout</a>
-                    </li>
-                    <li>
-                        <a class="" href="#">Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="navbar-right">
-            <ul class="nav navbar-nav no-borders">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-speaker"></i>
-                    </a>
-                    <ul class="dropdown-menu hdropdown notification animated flipInX">
-                        <li>
-                            <a>
-                                <span class="label label-success">NEW</span> Text 
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="label label-warning">WAR</span> Text
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="label label-danger">ERR</span> Text
-                            </a>
-                        </li>
-                        <li class="summary"><a href="#">See all notifications</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-keypad"></i>
-                    </a>
-
-                    <div class="dropdown-menu hdropdown bigmenu animated flipInX">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-portfolio text-info"></i>
-                                        <h5>Projects</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-mail text-warning"></i>
-                                        <h5>Email</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-users text-success"></i>
-                                        <h5>Contacts</h5>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-comment text-info"></i>
-                                        <h5>Forum</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-graph1 text-danger"></i>
-                                        <h5>Analytics</h5>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <i class="pe pe-7s-box1 text-success"></i>
-                                        <h5>Files</h5>
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
-                        <i class="pe-7s-mail"></i>
-                        <span class="label label-success">4</span>
-                    </a>
-                    <ul class="dropdown-menu hdropdown animated flipInX">
-                        <div class="title">
-                            You have 4 new messages
-                        </div>
-                        <li>
-                            <a>
-                                It is a long established.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                There are many variations.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Lorem Ipsum is simply dummy.
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Contrary to popular belief.
-                            </a>
-                        </li>
-                        <li class="summary"><a href="#">See All Messages</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" id="sidebar" class="right-sidebar-toggle">
-                        <i class="pe-7s-upload pe-7s-news-paper"></i>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="pe-7s-upload pe-rotate-90"></i>
-                    </a>
-                </li>
-            </ul>
+            
         </div>
     </nav>
 </div>
@@ -192,18 +60,14 @@
             </a>
 
             <div class="stats-label text-color">
-                <span class="font-extra-bold font-uppercase">UserName</span>
+                <span class="font-extra-bold font-uppercase">Dexters</span>
 
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                         <small class="text-muted">Menu<b class="caret"></b></small>
                     </a>
                     <ul class="dropdown-menu animated flipInX m-t-xs">
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Analytics</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Logout</a></li>
+                         <li><a th:href="@{landing}">Logout</a></li>
                     </ul>
                 </div>
 
@@ -213,7 +77,7 @@
                     <h4 class="font-extra-bold m-b-xs">
                         $260 104,200
                     </h4>
-                    <small class="text-muted">Your income from the last year in sales product X.</small>
+                    <small class="text-muted">Your income from the last year in sales product.</small>
                 </div>
             </div>
         </div>
@@ -262,29 +126,18 @@
         <div class="col-lg-6">
             <div class="hpanel hgreen">
                 <div class="panel-body">
-                    <h3>Microservices</h3>
-                    <div class="text-muted font-bold m-b-xs"><ul>
-                        <li>Microservices version</li>
-                        <li>Microservices Project</li>
-                    </ul></div>
-                    <p>
-                        Microservices
-                    </p>
+                  <h2>  <a href="https://walletinvestor.com/magazine/review-of-the-huobi-multi-chain-light-wallet-after-the-addition-of-eos-and-trx/">Review of the Huobi multi-chain light wallet after the addition of EOS and TRX</a></h2>
+                <p>Exchanges recently have been innovating heavily by offering a wide range of services, this growing trend can be monitored through</p>
                 </div>
+                
 
             </div>
         </div>
         <div class="col-lg-6">
             <div class="hpanel hyellow">
                 <div class="panel-body">
-                    <h3>ASP.NET MVC version</h3>
-                    <div class="text-muted font-bold m-b-xs"><ul>
-                        <li>MVC5 Full version</li>
-                        <li>MVC5 Seed Project</li>
-                        <li>MVC6 Full version</li>
-                        <li>MVC6 Seed Project</li>
-                    </ul></div>
-                    <p>Microservices. </p>
+                    <h2><a href="https://walletinvestor.com/magazine/technical-analysis-11-26-btc-usd-bitcoin-capitulates-a-bottom-might-be-in-sight/">Technical Analysis (11/26): BTC/USD – Bitcoin capitulates, a bottom might be in sight.</a></h2>
+                    <p>The market Global crypto markets including Bitcoin and Altcoins are taking the plunge. Bitcoin has capitulated recently after several weeks of sideways movements. This didn’t help Altcoins either, but they</p>
                 </div>
 
             </div>
@@ -292,14 +145,8 @@
         <div class="col-lg-6">
             <div class="hpanel hviolet">
                 <div class="panel-body">
-                    <h3>Microservices</h3>
-                    <div class="text-muted font-bold m-b-xs"><ul>
-                        <li>Full version</li>
-                        <li>Seed Project</li>
-                    </ul></div>
-                    <p>
-                        Microservices
-                    </p>
+                   <h2><a href="https://walletinvestor.com/magazine/coinbase-launched-agency-only-otc-trading/">Coinbase launched agency-only OTC trading</a></h2>
+                   <p>Coinbase is the latest cryptocurrency business to launch an OTC trading desk, following companies such as the Goldman Sachs’ backed Circle and Cumberland. The announcement has been made through an</p>
                 </div>
 
             </div>
@@ -307,14 +154,8 @@
         <div class="col-lg-6">
             <div class="hpanel hblue">
                 <div class="panel-body">
-                    <h3>METEOR version</h3>
-                    <div class="text-muted font-bold m-b-xs"><ul>
-                        <li>Full version</li>
-                        <li>Seed Project</li>
-                    </ul></div>
-                    <p>
-                        Microservices
-                    </p>
+                    <h2><href src="https://walletinvestor.com/magazine/jpmorgan-achieves-record-8-71-billion-profit-in-the-first-quarter/">JPMorgan achieves record $8.71 billion profit in the first quarter</a></h2>
+                    <p>JPMorgan Chase &amp; Co (see our JPMorgan stock forecast), leading US bank, assets reported a 35% grow in quarterly profit today according to a statement that the bank released. This impressive change is mainly a result of higher interest rates for loans and lower taxes. The bank’s net income surged</p>
                 </div>
 
             </div>
@@ -325,22 +166,31 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <div class="hpanel hred">
                 <div class="panel-body">
-                    <h3>Microservices</h3>
-                    <div class="text-muted font-bold m-b-xs"><ul>
-                        <li>Microservices</li>
-                        <li>Microservices</li>
-                        <li>Microservices</li>
-                    </ul></div>
-                    <p>
-                        Microservices
-                    </p>
+                  <h2 class="article-title">NVIDIA Corp. shares rally again after a 2 week consolidation</h2>
+                 <p class="caps">NVIDIA (NVDA) Corporation shares&nbsp;(see our&nbsp;<a href="https://walletinvestor.com/stock-forecast/nvda-stock-prediction" target="_blank" rel="noopener">NVIDIA stock forecast</a>) have rallied 5,80% just recently after a 2 week consolidation after reaching an all time high of 250,48 USD / share on NASDAQ. NVIDIA Corp is an American (California based) technology company that primarily designs graphics processing units.</p>
                 </div>
 
             </div>
         </div>
+        
+       <div class="col-lg-6">
+            <div class="hpanel hblue">
+                <div class="panel-body">
+                    <h2>Stock Picks Articles</h2>
+                    <p>Perhaps the most difficult part about investing is deciding what to actually invest in. Compiled by our experts and editors, our stock picks will assist any investor in stocks to buy, stocks to sell, or anything in between. 
+                    Our stock advice ranges from the largest cap stocks such as Apple and Google to the most promising small cap and penny stocks. Everyone wants to be a successful investor and our investment tips will help put you on track to reaching your financial goals.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>  
+        
+        
+        
     </div>
 
     </div>
@@ -350,9 +200,9 @@
 <!-- Right sidebar -->
     <footer class="footer">
         <span class="pull-right">
-            Microservices
+            Business
         </span>
-        Microservices
+        Trending Information
     </footer>
 
 </div>
